@@ -38,6 +38,7 @@
 
 
 <body class="${properties.kcBodyClass!}">
+<img src="${url.resourcesPath}/img/bg1.png" class="bg-img"/>
   <div class="${properties.kcLoginClass!}">
     <div class="${properties.kcFormCardClass!} <#if displayWide>${properties.kcFormCardAccountClass!}</#if>">
       <header class="${properties.kcFormHeaderClass!}">
