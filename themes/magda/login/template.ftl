@@ -1,4 +1,4 @@
-<#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true displayRequiredFields=false displayWide=false showAnotherWayIfPresent=true page="login">
+<#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true displayRequiredFields=false displayWide=false showAnotherWayIfPresent=true>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" class="${properties.kcHtmlClass!}">
 
@@ -14,7 +14,6 @@
     </#if>
     <title>${msg("loginTitle",(realm.displayName!''))}</title>
     <link rel="icon" href="${url.resourcesPath}/img/favicon.ico" />
-    
     <#if properties.stylesCommon?has_content>
         <#list properties.stylesCommon?split(' ') as style>
             <link href="${url.resourcesCommonPath}/${style}" rel="stylesheet" />
@@ -38,24 +37,8 @@
 </head>
 
 
-    <div class="badge-img">
-        <div class="badge-image" src="EmiratesRedLogoBadge.png" alt=""> </div>
-    </div>
-
-
-    <div class="avatar">
-        <div class="avatar-image" src="/Users/ana-mariamicu/Documents/Keycloak/keycloak-19.0.0/themes/emirates/login/resources/img/avatar.png" alt=""> </div>
-        <div class="rotate-instruction-container" >
-            <div class="rotate-instruction-text">Please Use your device in Landscape Mode</div>
-            <img class="rotate-icon" id="kc-page-subheading" src="${url.resourcesPath}/img/rotate_icon.svg"/>
-        </div> 
-    </div>
-
 <body class="${properties.kcBodyClass!}">
   <div class="${properties.kcLoginClass!}">
-
-
-
     <div class="${properties.kcFormCardClass!} <#if displayWide>${properties.kcFormCardAccountClass!}</#if>">
       <header class="${properties.kcFormHeaderClass!}">
         <#if realm.internationalizationEnabled  && locale.supported?size gt 1>
@@ -80,11 +63,6 @@
                     </div>
                     <div class="col-md-10">
                         <h1 id="kc-page-title"><#nested "header"></h1>
-                        <#if page = "login">
-                            <img id="kc-page-subheading" src="${url.resourcesPath}/img/login_subheading.png"/>
-                        <#elseif page = "register">
-                            <img class="profile" id="kc-page-subheading" src="${url.resourcesPath}/img/profile.png"/>
-                        </#if>
                     </div>
                 </div>
             <#else>
@@ -132,13 +110,13 @@
 
           <#-- App-initiated actions should not see warning messages about the need to complete the action -->
           <#-- during login.                                                                               -->
-          <#if page="login" && displayMessage && message?has_content && (message.type != 'warning' || !isAppInitiatedAction??)>
+          <#if displayMessage && message?has_content && (message.type != 'warning' || !isAppInitiatedAction??)>
               <div class="alert alert-${message.type}">
                   <#if message.type = 'success'><span class="${properties.kcFeedbackSuccessIcon!}"></span></#if>
                   <#if message.type = 'warning'><span class="${properties.kcFeedbackWarningIcon!}"></span></#if>
                   <#if message.type = 'error'><span class="${properties.kcFeedbackErrorIcon!}"></span></#if>
                   <#if message.type = 'info'><span class="${properties.kcFeedbackInfoIcon!}"></span></#if>
-                  <span class="kc-feedback-text">${message.summary}</span>
+                  <span class="kc-feedback-text">${kcSanitize(message.summary)?no_esc}</span>
               </div>
           </#if>
 
@@ -163,14 +141,11 @@
               </div>
           </#if>
         </div>
-
-            </div>
       </div>
 
 
     </div>
   </div>
-<script src="${url.resourcesPath}/js/index.js"></script>
 </body>
 </html>
 </#macro>
