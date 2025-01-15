@@ -1,0 +1,27 @@
+# Query: #kc-header-wrapper
+# ContextLines: 1
+
+4 results - 2 files
+
+lib/lib/main/org.keycloak.keycloak-themes-19.0.0/theme/keycloak/login/resources/css/login.css:
+   90  
+   91  
+   92: #kc-header-wrapper {
+
+   92      font-size: 29px;
+   93      font-size: 29px;
+
+  371  
+  372  
+  373:     #kc-header-wrapper {
+  373          font-size: 16px;
+  374          font-size: 16px;
+
+themes/MyTheme/login/resources/css/login.css:
+   91  
+   92: #kc-header-wrapper {
+   93      font-size: 29px;
+
+  372  
+  373:     #kc-header-wrapper {
+  374          font-size: 16px;

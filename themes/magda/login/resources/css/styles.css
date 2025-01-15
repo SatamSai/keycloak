@@ -1,0 +1,501 @@
+@font-face {
+    font-family: 'Emirates Medium';
+    src: font-url('/Fonts/Emirates Medium.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'PrestageRegular';
+    src: url('../Fonts/PrestageRegular.ttf') format("truetype");
+}
+
+:root {
+    --textColor: #000;
+    --textOffColor: #7c858d;
+    --baseColor: #23333f;
+    --baseDarkColor: #231F20;
+    --baseLightColor: #E7002A;
+    --secColor: #11f7e2;
+    --loginCardBg: #fff;
+    --inputBorder: rgb(164, 38, 44);
+    --primaryColor: #ff0378;
+    --primaryColorLight: #ff0378aa;
+}
+
+body {
+    background: white !important;
+    width: cover;
+    height: 100%;
+}
+
+.avatar {
+    position: relative;
+}
+
+.avatar-image {
+    background: url(../img/login_backdrop.png) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    align-content: center;
+    z-index: 0;
+}
+
+
+.login-pf-page {
+    border-radius: 0px;
+    background: none;
+    padding: 0px;
+}
+
+
+.card-pf {
+    margin: 0 auto;
+    box-shadow: none;
+    padding: 2.25rem 6.5rem 2.5rem !important;
+    border-top: 0px solid;
+    border-color: none;
+    position: absolute;
+    background-color: var(--loginCardBg);
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    color: var(--textColor);
+}
+
+#kc-page-title {
+    color: black;
+    font-family: "PrestageRegular", Helvetica, sans-serif;
+    margin-bottom: 1.5rem;
+    margin-top: 0px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+#kc-page-subheading {
+    padding: 5px;
+    margin: 5px;
+}
+
+#kc-content {
+    width: 100%;
+}
+
+.form-group {
+    margin: 16px 0px;
+    color: #f00;
+    display: flex;
+    justify-content: center;
+}
+
+.pf-c-form-control {
+    width: 410px;
+    height: 30px !important;
+    border-radius: 2px;
+    border: 1px solid white;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
+    font-size: 14px;
+    color: white
+}
+
+.pf-c-form-control.input-sm {
+    width: 330px;
+}
+
+.field::after {
+    content: "*";
+    margin-left: 3px;
+}
+
+.pf-c-form-control:focus {
+    border-color: var(--inputBorder);
+    outline: none;
+}
+
+
+.pf-c-form-control::placeholder {
+    color: #999999;
+    /* Replace with your desired placeholder color */
+}
+
+/* Vendor prefixes for cross-browser compatibility */
+.pf-c-form-control::-webkit-input-placeholder {
+    color: #999999;
+    /* Chrome, Safari, Opera */
+}
+
+.pf-c-form-control::-moz-placeholder {
+    color: #999999;
+    /* Firefox 19+ */
+}
+
+.pf-c-form-control:-ms-input-placeholder {
+    color: #999999;
+    /* Internet Explorer 10-11 */
+}
+
+.pf-c-form-control::-ms-input-placeholder {
+    color: #999999;
+    /* Microsoft Edge */
+}
+
+
+.alert-error {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 41px;
+    width: 410px;
+    color: white;
+}
+
+
+#kc-info {
+    margin-top: 0px;
+}
+
+.pf-c-button {
+    background-color: white;
+    border-radius: 100px !important;
+    color: lightgray;
+    font-size: 15px;
+    border: 1px solid lightgray;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 45px;
+}
+
+.pf-c-button:disabled {
+    background-color: lightgray;
+    color: white;
+    cursor: not-allowed !important;
+}
+
+.pf-c-button.filled {
+    background-color: var(--primaryColor);
+}
+
+
+
+.pf-c-button:hover {
+    background-color: lightgray;
+    color: white;
+}
+
+.zocial {
+    background-color: white;
+    border-radius: 100px !important;
+    color: lightgray;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 10px !important;
+    border: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+}
+
+.zocial:hover {
+    background-color: lightgray;
+    text-decoration: none;
+    color: white;
+}
+
+#kc-info {
+    margin-top: 20px;
+}
+
+#kc-registration,
+#kc-form-reset-psw {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+#kc-registration>span>a,
+#kc-form-reset-psw>span>a {
+    color: var(--primaryColor);
+    margin-left: 3px;
+}
+
+#kc-registration>span>a:hover,
+#kc-form-reset-psw>span>a:hover {
+    color: var(--primaryColorLight);
+}
+
+#kc-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-pf-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.content-center {
+    display: flex;
+    justify-content: center;
+}
+
+.go-back {
+    color: white;
+    font-size: 16px;
+}
+
+.form-text {
+    font-size: 16px;
+    color: white;
+}
+
+.form-text>a {
+    color: var(--primaryColor);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex>input[type="checkbox"] {
+    margin: 0;
+}
+
+
+
+.form-terms {
+    margin-left: 10px;
+    margin-bottom: 0px;
+    color: white;
+    font-size: 12px;
+}
+
+.form-link>a {
+    color: var(--primaryColor);
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+.rotate-instruction-container {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000e6;
+    z-index: 1;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.rotate-instruction-text {
+    color: white;
+    font-family: "PrestageRegular", Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.rotate-icon {
+    height: 35px;
+    width: 35px;
+}
+
+
+@media only screen and (max-width:1080px) {
+
+    .card-pf {
+        padding: 1.75rem 5rem 2rem !important;
+        border-radius: 20px;
+    }
+
+    #kc-page-title {
+        margin-bottom: 1rem;
+        font-size: 28px;
+    }
+
+    #kc-page-subheading {
+        width: 250px;
+    }
+
+    #kc-content {
+        width: 100%;
+    }
+
+    .form-group {
+        margin: 14px 0px;
+    }
+
+    .pf-c-form-control {
+        width: 380px;
+        font-size: 13px;
+    }
+
+    .pf-c-form-control.input-sm {
+        width: 310px;
+    }
+
+    .alert-error {
+        margin-left: 35px;
+        width: 380px;
+    }
+
+
+    .pf-c-button {
+        font-size: 16px;
+        padding: 4px 13px;
+        margin-bottom: 2px;
+    }
+
+    .zocial {
+        font-size: 16px;
+        padding: 4px 13px;
+        margin-top: 8px !important;
+    }
+
+    #kc-info {
+        margin-top: 15px;
+    }
+
+    #kc-registration,
+    #kc-form-reset-psw {
+        font-size: 13px;
+        margin-bottom: 4px;
+    }
+
+    .form-text {
+        font-size: 14px;
+        color: white;
+    }
+
+    .form-terms {
+        margin-left: 8px;
+    }
+
+    .form-link>a {
+        color: var(--primaryColor);
+        text-transform: capitalize;
+        font-size: 14px;
+    }
+
+
+    .rotate-instruction-text {
+        font-size: 21.5px;
+    }
+
+    .rotate-icon {
+        height: 35px;
+        width: 35px;
+    }
+
+}
+
+@media only screen and (max-width:900px) {
+
+    .card-pf {
+        padding: 1rem 2.5rem 1.2rem !important;
+        border-radius: 15px;
+    }
+
+    #kc-page-title {
+        margin-bottom: 0.5rem;
+        font-size: 23px;
+    }
+
+    #kc-page-subheading {
+        width: 150px;
+    }
+
+    .login-pf-header {
+        margin-bottom: 0px !important;
+    }
+
+    #kc-content {
+        width: 100%;
+    }
+
+    .form-group {
+        margin: 9px 0px;
+    }
+
+    .pf-c-form-control {
+        width: 220px;
+        height: 22px !important;
+        font-size: 9px;
+    }
+
+    .pf-c-form-control.input-sm {
+        width: 220px;
+    }
+
+
+    .alert-error {
+        margin-left: 35px;
+        width: 300px;
+    }
+
+    .error {
+        font-size: 9px;
+    }
+
+    .pf-c-button {
+        font-size: 11px;
+        padding: 2px 9px;
+        margin-bottom: 2px;
+    }
+
+    .zocial {
+        font-size: 11px;
+        padding: 2px 9px;
+        margin-top: 6px !important;
+    }
+
+    #kc-info {
+        margin-top: 9px;
+    }
+
+    #kc-registration,
+    #kc-form-reset-psw {
+        font-size: 10px;
+        margin-bottom: 2px;
+    }
+
+    .form-text {
+        font-size: 9px;
+    }
+
+    .form-terms {
+        margin-left: 3px;
+    }
+
+    .form-link>a {
+        font-size: 11px;
+    }
+
+
+    .rotate-instruction-text {
+        font-size: 17px;
+    }
+
+    .rotate-icon {
+        height: 35px;
+        width: 35px;
+    }
+
+}
